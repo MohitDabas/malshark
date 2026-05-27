@@ -1,0 +1,24 @@
+[project]
+name = "wireshark-mcp-server"
+version = "0.1.0"
+description = "MCP server for Wireshark packet capture and analysis using pyshark"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastmcp>=3.3.1",
+]
+
+[project.scripts]
+wireshark-mcp = "wireshark_mcp_server.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wireshark_mcp_server"]
+
+[dependency-groups]
+dev = [
+    "hatchling>=1.29.0",
+]
