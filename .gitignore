@@ -14,3 +14,8 @@ project_knowledge.md
 
 # Malware samples — never commit actual malware
 malware_data/
+
+# Pcap files — drop your captures in pcaps/ but never commit them
+*.pcap
+*.pcapng
+*.cap

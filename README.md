@@ -103,17 +103,17 @@ Restart Cursor. The tools appear automatically in Agent mode.
 
 ## Quick Start
 
-Once the MCP server is running, open Cursor and ask:
+Drop your capture file into the `pcaps/` folder, then ask your AI:
 
 ```
-Analyze /path/to/capture.pcap — give me the victim IP, all IOCs, and
+Analyze pcaps/capture.pcap — give me the victim IP, all IOCs, and
 check if there's any beaconing or file downloads.
 ```
 
-Or run a specific tool call in the Cursor chat:
+Or run a specific tool:
 
 ```
-Run extract_iocs on /path/to/capture.pcap
+Run extract_iocs on pcaps/capture.pcap
 ```
 
 ### Running tools directly (without Cursor)
@@ -158,6 +158,7 @@ Every tool has been validated against real-world malware captures from [malware-
 
 ```
 malshark/
+├── pcaps/                   ← drop your .pcap / .pcapng files here
 ├── src/wireshark_mcp_server/
 │   ├── core.py              # tshark runner, benign-domain list, shared helpers
 │   ├── server.py            # FastMCP instance
