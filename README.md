@@ -1,6 +1,8 @@
 # MalShark
 
-> **AI-powered malware traffic analysis and network forensics via the Model Context Protocol.**
+> **MCP-powered malware traffic analysis and network forensics — benchmarked against real malware.**
+
+![MalShark benchmark results — extract_iocs vs ground truth on real malware samples](assets/benchmark-results.png)
 
 A production-quality [MCP](https://modelcontextprotocol.io/) server that wraps `tshark` (Wireshark's CLI) and exposes a suite of malware analysis tools directly inside Cursor (or any MCP-compatible AI client). Ask your AI to analyze a pcap in plain English — it runs the right tools, correlates the results, and reports IOCs, C2 beacons, credential leaks, and exfiltration candidates automatically.
 
